@@ -67,8 +67,10 @@
 }
 
 .movie{
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: 200px 500px;
+    grid-template-areas: "img t"
+                         " .  p";
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -82,13 +84,25 @@
 
 .movie img{
     max-height: 300px;
+    grid-area: img;
 }
 
 .movie p{
     max-height: 423px;
+    grid-area: p;
+    margin-top: -250px;
+    max-width: 275px;
+    color: var(--title);
+    margin-left: 34px;
+    
 }
 
 .img-error{
     max-height: 300px;
 }
 
+.movie h4{
+    grid-area: t;
+    color: var(--title);
+    margin-left: 34px;
+}
